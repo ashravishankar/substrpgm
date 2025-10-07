@@ -110,7 +110,7 @@ char* convert_db_query(const char* query, const char* db, const Mapping_table* d
         
         const char* cmd = map->command;
 
-        //str all occurrences of command with db function
+        //Replace all occurrences of command with db function
         char* new_query = str_query(dup_query, cmd, func);
         free(dup_query);
         
