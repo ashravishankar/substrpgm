@@ -1,0 +1,26 @@
+{
+  "CMD_SUBSTRING": {
+    "DBMS1": "substr",
+    "DBMS2": "substring",
+    "DBMS3": "sbstr",
+    "PostgreSQL": "substring",
+    "MySQL": "substr",
+    "sqlite": "substr"
+  },
+  "CMD_LENGTH": {
+    "DBMS1": "length",
+    "DBMS2": "len",
+    "DBMS3": "char_length",
+    "PostgreSQL": "char_length",
+    "MySQL": "length",
+    "sqlite": "length"
+  },
+  "CMD_CONCATENATE": {
+    "DBMS1": "concat",
+    "DBMS2": "||",
+    "DBMS3": "concat_ws",
+    "PostgreSQL": "concat",
+    "MySQL": "concat",
+    "sqlite": "||"
+  }
+}

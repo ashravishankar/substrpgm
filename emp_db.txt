@@ -1,0 +1,55 @@
+ash:substrpgm$ sqlite3 emp.db
+SQLite version 3.31.1 2020-01-27 19:55:54
+Enter ".help" for usage hints.
+
+sqlite> CREATE TABLE employees (
+   ...> id INTEGER PRIMARY KEY,
+   ...> name TEXT NOT NULL,
+   ...> email TEXT UNIQUE,
+   ...> salary INTEGER NOT NULL CHECK (salary != 0)
+   ...> );
+
+sqlite> INSERT INTO employees (name, email, salary) VALUES ('Adam', 'adam@abc.com', 20000);
+
+sqlite> INSERT INTO employees (name, email, salary) VALUES ('Barbara', 'barbara@def.com', 1000);
+
+sqlite> INSERT INTO employees (name, email, salary) VALUES ('Cathy', 'cathy@xyzq.com', 65000);
+
+sqlite> .tables
+employees
+
+sqlite> SELECT * from employees
+   ...> ;
+1|Adam|adam@abc.com|20000
+2|Barbara|barbara@def.com|1000
+3|Cathy|cathy@xyzq.com|65000
+
+sqlite> SELECT email FROM employees WHERE name="Cathy";
+cathy@xyzq.com
+
+sqlite> .schema employees
+CREATE TABLE employees (
+id INTEGER PRIMARY KEY,
+name TEXT NOT NULL,
+email TEXT UNIQUE,
+salary INTEGER NOT NULL CHECK (salary != 0)
+);
+
+sqlite> SELECT substr(name, 1, 3) from employees;
+Ada
+Bar
+Cat
+
+sqlite> SELECT name || ' ' || salary AS emp_data FROM employees;
+Adam 20000
+Barbara 1000
+Cathy 65000
+
+sqlite> SELECT LENGTH(email) FROM employees;
+12
+15
+14
+sqlite> .quit
+
+ash:substrpgm$
+

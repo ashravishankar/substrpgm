@@ -1,0 +1,14 @@
+{
+  "CMD_SUBSTRING": {
+    "MySQL": "substr",
+    "sqlite": "substr"
+  },
+  "CMD_LENGTH": {
+    "MySQL": "length",
+    "sqlite": "length"
+  },
+  "CMD_CONCATENATE": {
+    "MySQL": "concat",
+    "sqlite": "concat"
+  }
+}
