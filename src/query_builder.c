@@ -78,9 +78,7 @@ char* convert_db_query(const char* query, const char* db, const Mapping_table* d
         fprintf(stderr, "Invalid arguments to convert_query\n");
         return NULL;
     }
-
-
-
+    
     char* dup_query = strdup(query);
     if (!dup_query) {
         fprintf(stderr, "Failed to duplicate query\n");
@@ -89,9 +87,8 @@ char* convert_db_query(const char* query, const char* db, const Mapping_table* d
 
     for (int i = 0; i < db_table->mapping_count; ++i) {
         const Cmd_Mapping* map = &db_table->cmd_map[i];
-
-
         const char* func = NULL;
+        
         for (int db_index = 0; db_index < map->database_count; ++db_index) {
             if (strlen(map->database[db_index]) == 0) {
                 continue;
