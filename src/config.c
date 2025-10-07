@@ -10,8 +10,6 @@ bool load_db_funcs(const char* config_file, Mapping_table* db_table) {
         return false;
     }
 
-
-
     FILE* fd = fopen(config_file, "r");
     if (!fd) {
         fprintf(stderr, "Failed to open config file %s\n", config_file);
