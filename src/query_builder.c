@@ -13,8 +13,6 @@ static char* str_query(const char* src, const char* pattern, const char* str) {
         return NULL;
     }
 
-
-
     int src_len = strlen(src);
     int pattern_len = strlen(pattern);
     int str_len = strlen(str);
