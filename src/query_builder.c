@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-//str all occurrences of 'pattern' in 'src' with 'str'.
+//Replace all occurrences of 'pattern' in 'src' with 'str'.
 static char* str_query(const char* src, const char* pattern, const char* str) {
 
     if (!src || !pattern || !str) {
